@@ -12,26 +12,107 @@
   <h1>Low-Fidelity Prototype</h1>
 
   <section>
-    <h2>Prototypes</h2>
+    <h2>Iterative Process</h2>
 
-    <h3>Prototype 1</h3>
-    <p><strong>Prototype Setup:</strong><br>
-      <strong>Laptop Screen:</strong> Displays paper mockups of the browser extension interfaces.<br>
-      <strong>Desk Mat:</strong> Features an LED light strip attached under the laptop. The LED intensity and frequency
-      change based on
-      the system's state (Low pulsing when it’s break time, rapid pulsing for distraction).
+    <h3>10 + 10 Sketches</h3>
+    <p>Below are the two PDF documents detailing the initial and improved iterations:</p>
+
+    <h4>Original 10 Concepts</h4>
+    <iframe src="../images/10DesignSketches.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+    <h4>Improved 10 Iterations</h4>
+    <iframe src="../images/10PlusDesignSketches.pdf" width="100%" height="600px" style="border:none;"></iframe>
     </p>
 
-    <h4>Workflow Illustration</h4>
+    <p>
+      The development of the study support system employed an iterative design process rooted in the 10+10 method. There
+      were ten original ideas developed in the initial stage to explore a wide variety of possibilities for enhancing
+      concentration and interest during study sessions. They varied in their complexity, from ambient lighting cues to
+      touch feedback systems and interface overlays. Following evaluation of their feasibility and likely impact, ten
+      improved iterations were constructed based on the previous system’s bests.
+    </p>
+    <p>
+      Two designs were selected from this improved set, each to perform a different function within the overall
+      evaluation of the system. The first design was chosen specifically to test the efficacy of ambient lighting when
+      incorporated into a real study environment. This version was minimalist in its interaction design to enable
+      researchers to isolate and observe how lighting by itself impacted the user's focus and mood with no interference
+      from other stimuli. The interest was whether minor visual cues would enhance attention in a naturalistic setting.
+    </p>
+    <p>
+      The second prototype was tested with the cumulative effect of multiple feedback cues, including vibration, color
+      lighting, and a structured interface. For an immersive study environment, a paper interface was placed in front of
+      the computer so that participants were able to interact with the system as they would during an actual study
+      session. This allowed for the testing of multiple feedback mechanisms and their influence on user behavior,
+      attention, and subjective intrusiveness.
+    </p>
+    <p>
+      By having these two disparate prototypes, the research was able to obtain complementary results: one related to
+      the ambient effect of illumination in an environment, and another related to the overlap of multimodal cues across
+      a working surface. This two-sided idea tried to get a comparison while understanding how diverse elements
+      influence
+      user experience and focus. This served as the next iteration of the system through grounded, user-driven evidence.
+    </p>
+  </section>
+
+  <section>
+    <h2>Prototypes</h2>
+
+    <h3>Prototype 1 (Chosen from Design 1 of 2nd Iteration)</h3>
+
+    <p><strong>Prototype Setup:</strong><br>
+      Laptop Screen: Displays paper mockups of the browser extension interfaces.<br>
+      Desk Mat: Features an LED light strip attached under the laptop. The LED intensity and frequency
+      changes based on the system's state (Low pulsing when it’s break time, rapid pulsing for distraction).
+    </p>
+
+    <h3>Workflow Illustration</h3>
+
     <p><strong>1. Initialization and Setup</strong></p>
     <p>User Goal: Start a new focused work session by defining allowed websites and session timing.</p>
     <p>Prototype State:<br>
       Screen: The setup interface is displayed. The user chooses its tab in front of the observer and decides on the
-      timer for the Pomodoro technique. The observer adjusts the width to block access to non chosen tabs.<br>
-      Under LED: Off.<br>
-      Coffee Mug: Empty.</p>
+      timer
+      for the Pomodoro technique. The observer adjusts the width to block access to non-chosen tabs.<br>
+      Underneath LED: Off.<br>
+      Coffee Mug: Empty.
+    </p>
 
-    <h3>Prototype 2</h3>
+    <figure>
+      <img src="../images/prototype1_setup.png" alt="Setup Interface" width="500">
+      <figcaption>Figure 1: Setup Interface</figcaption>
+    </figure>
+
+    <p><strong>2. Maintaining Focus</strong></p>
+    <p>User Goal: Work productively on approved, focused tabs.</p>
+    <p>Prototype State:<br>
+      Screen: The user is on a focused tab (e.g., Google Docs). The coffee mug icon in the browser's toolbar is
+      partially
+      filled, providing a visual progress indicator for the current focus interval.<br>
+      Underneath LED: Off, the user is studying as normal.
+    </p>
+
+    <p><strong>3. Handling Distraction</strong></p>
+    <p>User Goal: Be made aware of and recover from being on distracting activities such as texting or using social
+      media.</p>
+    <p>Prototype State:<br>
+      LED: Rapidly pulsing (breathing) to signal a distraction.<br>
+      Screen: Optionally dimmed or blocked for non-focus tabs to alert the user.
+    </p>
+
+    <p><strong>4. Break Time</strong></p>
+    <p>User Goal: Be notified that it is time to take a scheduled break.</p>
+    <p>Prototype State:<br>
+      Screen: The focus timer has ended. A notification ("It’s time for a break!") appears. The coffee mug icon is now
+      completely full.<br>
+      Desk Mat LED: Slow pulsing (breathing) to indicate a transition from work to rest.
+    </p>
+
+    <figure>
+      <img src="../images/prototype1_break.png" alt="Break Reminder" width="500">
+      <figcaption>Figure 4: Break Reminder with LED signaling rest period</figcaption>
+    </figure>
+
+    <h3>Prototype 2 (Chosen from Design 4 of 2nd Iteration)</h3>
     <p><strong>Prototype Setup:</strong><br>
       Laptop Screen: Displays paper mockups of the browser extension interfaces.<br>
       Desk Mat: Features an LED light strip attached behind the laptop. The LED color changes based on the system's
@@ -55,7 +136,7 @@
 
     <figure>
       <img src="../images/prototype2_study.PNG" alt="Active Focus Mode" width="500">
-      <figcaption>Figure 2: Active Focus Mode</figcaption>
+      <figcaption>Figure 3: Active Focus Mode</figcaption>
     </figure>
 
     <p><strong>3. Handling Distraction</strong><br>
@@ -64,7 +145,7 @@
 
     <figure>
       <img src="../images/prototype2_distract.PNG" alt="Distraction Detected" width="500">
-      <figcaption>Figure 3: Distraction Detected</figcaption>
+      <figcaption>Figure 4: Distraction Detected</figcaption>
     </figure>
 
     <p><strong>4. Break Time</strong><br>
@@ -73,7 +154,7 @@
 
     <figure>
       <img src="../images/prototype2_break.PNG" alt="Break Reminder" width="500">
-      <figcaption>Figure 4: Break Reminder</figcaption>
+      <figcaption>Figure 5: Break Reminder</figcaption>
     </figure>
 
     <p>This low-fidelity prototype demonstrates the core value of FocusBrowse: using on-screen cues, ambient light, and
@@ -86,93 +167,181 @@
       Satisfaction, Error Recovery, and Engagement (Non-Intrusiveness). The following objectives and corresponding
       metrics are designed to be directly measured using data collected from the benchmark tasks and post-testing
       questionnaire.</p>
-    <ol>
-      <li><strong>Learnability:</strong> The primary learnability goal is that new users can independently configure and
-        initiate a focus session within 2 minutes. This will be measured by timing how long it takes participants to
-        complete the "Starting the Focus Session" benchmark task, from the moment they are instructed to begin until the
-        session is active and the LED light turns green. Success is defined as 100% if users complete this setup task
-        within the two-minute threshold without requiring assistance from the observer.</li>
-      <li><strong>Efficiency:</strong> The system aims to help users maintain focus with minimal internal distraction.
-        To measure this, we will analyze the time it takes for a user to complete the "Reacting to a Distraction"
-        benchmark task. We will record the duration between when a user opens a non-focus tab (triggering the system's
-        feedback) and when they return to a focused tab. A shorter duration indicates more efficient error recovery and
-        less time has been lost to distractions. This metric will be enforced by the post-test question, "Did the system
-        help you stay focused?" where a high average likert score will confirm that the system is effective.</li>
-      <li><strong>Satisfaction:</strong> A core goal is for users to feel that the system genuinely supports their focus
-        and productivity, leading to a positive subjective experience. This will be measured through the post-testing
-        questionnaire. We will calculate the average scores from questions about ease of use, helpfulness of feedback,
-        and usefulness of break reminders. Furthermore, the response to "Would you use this system on a daily study
-        routine?" will serve as an indicator of the overall satisfaction of the system. These open-ended questions about
-        what users liked will provide qualitative support.</li>
-      <li><strong>Error Recovery:</strong> This goal focuses on the system's ability to help users quickly return to
-        their task after becoming distracted. The key metric is the duration of distraction, which is the time elapsed
-        during the "Reacting to a Distraction" benchmark task. We will use the timelapse recording to precisely measure
-        how many seconds pass from the moment the restrictive UI is triggered , for example a dimmed screen and an
-        alert, until the user has closed the distracting tab or switched back to a focused one. A successful system will
-        guide users to correct their behavior, resulting in a low average distraction duration.</li>
-      <li><strong>Engagement:</strong> It is critical that users do not find the system's feedback mechanisms intrusive
-        or annoying. The primary metric for this goal is the direct response to the post-test question, "How much did
-        you find this system intrusive?" on a Likert scale. A low average score here will indicate that the visual and
-        physical cues (dimming, LED changes, vibration) were noticeable without being disruptive. This data will be
-        enforced by qualitative feedback from the "What would you improve?" question, where we will note if any users
-        specifically mention the feedback as being too aggressive.</li>
-    </ol>
 
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Usability Goal</th>
+          <th>Objective</th>
+          <th>Measurement Method</th>
+          <th>Key Metric(s)</th>
+          <th>Success Criteria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Learnability</td>
+          <td>Ensure new users can independently configure and start a focus session quickly.</td>
+          <td>Benchmark Task 1 — Starting the Focus Session (timed observation).</td>
+          <td>Time (seconds) from task start until session active (LED green).</td>
+          <td>100% of participants complete setup within 2 minutes without assistance.</td>
+        </tr>
+        <tr>
+          <td>Efficiency</td>
+          <td>Minimize time lost to distractions during study sessions.</td>
+          <td>Benchmark Task 2 — Reacting to a Distraction; Post-test question: "Did the system help you stay focused?"
+          </td>
+          <td>Duration (s) between opening a non-focus tab and returning to a focus tab; Likert rating of focus support.
+          </td>
+          <td>Average distraction recovery time is short; average Likert score ≥ 4/5.</td>
+        </tr>
+        <tr>
+          <td>Satisfaction</td>
+          <td>Ensure users feel supported, comfortable, and productive using the system.</td>
+          <td>Post-testing questionnaire (Likert & open-ended questions).</td>
+          <td>Average ratings on ease of use, helpfulness of feedback, usefulness of reminders, and "Would you use this
+            system daily?"</td>
+          <td>Average scores ≥ 4/5; positive qualitative feedback from open-ended responses.</td>
+        </tr>
+        <tr>
+          <td>Error Recovery</td>
+          <td>Help users quickly recover from distractions using the system’s cues.</td>
+          <td>Benchmark Task 2 — Reacting to a Distraction analyzed using timelapse video.</td>
+          <td>Duration (s) from feedback trigger to correction (focus regained).</td>
+          <td>Low average distraction duration; users guided effectively by feedback cues.</td>
+        </tr>
+        <tr>
+          <td>Engagement (Non-Intrusiveness)</td>
+          <td>Provide focus cues that are effective but not annoying or disruptive.</td>
+          <td>Post-test question: "How much did you find this system intrusive?" and open-ended feedback ("What would
+            you improve?")</td>
+          <td>Average intrusiveness rating (Likert scale); qualitative comments.</td>
+          <td>Average intrusiveness score ≤ 2/5; minimal user complaints about feedback being too aggressive.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section>
     <h2>Benchmarking Tasks</h2>
     <p>To assess whether the system's usability goals are met, participants will be asked to complete a series of
       benchmark tasks. These tasks are designed to encompass the core functionality of the system, from initial setup to
-      managing distractions and breaks.
-    </p>
+      managing distractions and breaks.</p>
+
     <h4>Task 1: Starting the Focus Session</h4>
     <p>The first benchmark task requires participants to configure and initiate
       a focus session. They will be asked to set up the system for a 50-minute study period focused on specific academic
-      websites, followed by a 15-minute break. The break is configurable by the user to be 15 to 30 minutes, according
-      to
-      the Pomodoro technique. The goal is to observe the initial setup process, measuring the time taken and noting any
-      points of confusion. Success is achieved when the session timer begins, the empty coffee mug icon becomes visible
-      in
-      the browser interface, and the LED light is green, indicating the system is active.</p>
-    <h4>Task 2: Reacting to a Distraction</h4>
-    <p>This task evaluates how users respond to the system's feedback when they become distracted. During their focus
-      session, participants will be instructed to intentionally open a non-focused website, such as a social media or
-      news platform. The objective is to measure how quickly the combination of visual dimming, physical vibration, and
-      LED color change guides them back to their main task. The key metric is the time elapsed between opening the
-      distracting tab and returning to a focused study tab.</p>
-    <h4>Task 3: Taking a Break</h4>
-    <p>The third task assesses the system's break reminder functionality. Participants will work until the system
-      automatically signals the end of the focus period. The goal is to observe whether the user acknowledges the break
-      notification, indicated by a filled coffee mug, a change in the desk pad's LED color, and a subtle vibration, and
-      actually steps away from their work. Success is measured by the user's adherence to the break prompt and their
-      seamless resumption of work when the next focus session begins.</p>
-    <h4>Task 4: Interacting with the Restrictive UI</h4>
+      websites, followed by a 15-minute break. The goal is to observe the initial setup process, measuring the time
+      taken
+      and noting any points of confusion. Success is achieved when the session timer begins, the empty coffee mug icon
+      becomes visible in the browser interface, and the LED light is green, indicating the system is active.</p>
+
+    <h4>Task 2: Interacting with the Restrictive UI</h4>
     <p>The final task involves general navigation within the constrained environment. Participants will be asked to
       perform typical study activities, such as navigating in their pre-approved tabs. The goal is to ensure that core
-      navigation remains fluid and unobstructed when staying within the defined parameters, validating that the system
-      supports productivity without adding unnecessary friction to the legitimate workflow.</p>
+      navigation remains fluid and unobstructed when staying within the defined parameters.</p>
+
+    <h4>Task 3: Reacting to a Distraction</h4>
+    <p>This task evaluates how users respond to the system's feedback when they become distracted. During their focus
+      session, participants will be instructed to intentionally open a non-focused website, such as a social media or
+      news platform. The key metric is the time elapsed between opening the distracting tab and returning to a focused
+      study tab.</p>
+
+    <h4>Task 4: Taking a Break</h4>
+    <p>The third task assesses the system's break reminder functionality. Participants will work until the system
+      automatically signals the end of the focus period. Success is measured by the user's adherence to the break prompt
+      and their seamless resumption of work when the next focus session begins.</p>
+
   </section>
 
   <section>
     <h2>Test Materials</h2>
+
     <h3>User Documentation & Training</h3>
 
     <h4>System Overview:</h4>
-    <p>FocusBrowse is a focus-enhancing system that includes:</p>
+    <p>FocusBrowse is designed to help users stay productive during online study sessions by managing focus sessions and
+      minimizing distractions.</p>
+
+    <h4>Prototype 1</h4>
     <ul>
-      <li>A browser extension for managing focused websites</li>
-      <li>A desk mat with LED lighting that changes color based on your focus status</li>
-      <li>Haptic feedback (vibration) for distraction alerts</li>
+      <li><strong>Components:</strong>
+        <ul>
+          <li>Browser extension for managing focused websites</li>
+          <li>LED light under the laptop</li>
+          <li>Haptic alerts to notify the user of distractions</li>
+        </ul>
+      </li>
+      <li><strong>Lighting Cues:</strong>
+        <ul>
+          <li>Slow pulsing: Break time</li>
+          <li>Rapid pulsing: Distraction</li>
+        </ul>
+      </li>
+      <li><strong>Icons:</strong> ☕ Coffee mug fills up as focus time progresses</li>
     </ul>
 
-    <h4>Basic Instructions:</h4>
+    <h4>Prototype 2</h4>
     <ul>
-      <li>Click the FocusBrowse icon in your browser toolbar to access settings</li>
-      <li>The system uses color cues: Green for focus time, Yellow for breaks, Red for distractions</li>
-      <li>The coffee mug icon fills up as you progress through your focus session</li>
-      <li>You can modify your focus settings at any time</li>
+      <li><strong>Components:</strong>
+        <ul>
+          <li>Browser extension for managing focused websites</li>
+          <li>LED desk mat that changes color based on focus status</li>
+          <li>Haptic alerts to notify the user of distractions</li>
+        </ul>
+      </li>
+      <li><strong>Color Cues:</strong>
+        <ul>
+          <li>🟢 Green: Focus time</li>
+          <li>🟡 Yellow: Break time or distraction time</li>
+        </ul>
+      </li>
+      <li><strong>Icons:</strong> ☕ Coffee mug fills up as focus time progresses</li>
     </ul>
+
+    <h4>Instructions:</h4>
+    <ul>
+      <li>Click the FocusBrowse icon in your browser toolbar to open the system menu</li>
+      <li>Configure your focus and break durations</li>
+      <li>Start your focus session</li>
+      <li>The system will automatically change modes and provide cues</li>
+      <li>You can adjust settings anytime via the toolbar icon</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Description of Test Tasks</h3>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Task #</th>
+          <th>Task Description</th>
+          <th>Goal of Task</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Configure a 50-minute focus session with a 15-minute break using the extension</td>
+          <td>Evaluate ease of setup and comprehension of the interface</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Open a restricted tab (YouTube) and observe system feedback</td>
+          <td>Assess the user’s recognition of distraction feedback</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Interact normally with Google Docs during focus mode</td>
+          <td>Test natural usability and any friction with the restrictive interface</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Continue studying until prompted for a break, step away briefly, then resume</td>
+          <td>Assess how well users respond to and understand break cues</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section>
@@ -249,6 +418,33 @@
     <div class="task-block">
       <p><em>"Before beginning the test, I would like you to fill out a brief questionnaire to know about your normal
           study behaviors."</em></p>
+    </div>
+
+    <h4>User Introduction</h4>
+    <div class="task-block">
+      <p><em>"Welcome! You will be testing FocusBrowse, a system designed to help students stay focused during
+          online study
+          sessions. There are two prototypes you may interact with:</p>
+
+      <ul>
+        <li>The first prototype focuses on ambient lighting cues under the laptop. Slow
+          pulsing = break, rapid pulsing = distraction. The coffee mug icon fills up as focus time progresses.</li>
+        <li>The second prototype uses multiple feedback cues: a color-changing LED desk mat, haptic alerts, and
+          structured interface. Green = focus, yellow = break/distraction. Coffee mug icon fills up as focus time
+          progresses.</li>
+      </ul>
+
+      <p>The following instructions apply to both prototypes:</p>
+      <ul>
+        <li>Click the FocusBrowse icon in your browser toolbar to access the system menu.</li>
+        <li>Configure your focus and break durations as instructed in the benchmark tasks.</li>
+        <li>Start your session and follow the visual and haptic cues provided.</li>
+        <li>Think aloud as you complete each task, describing your interactions and experience.</li>
+        <li>Follow break notifications and resume study when prompted.</li>
+      </ul>
+
+      <p>The goal is to evaluate the system, not your performance. Your honest feedback is important for improving
+        FocusBrowse."</em></p>
     </div>
 
     <h4>Task 1: Starting the Focus Session</h4>
@@ -350,31 +546,246 @@
   <section>
     <h2>Results</h2>
 
-    <h3>Testings</h3>
-    <figure>
-      <img src="../images/prototype2_test1.PNG" alt="" width="500">
-      <figcaption>Figure 4: First Test of Prototype 2</figcaption>
-    </figure>
-    <figure>
-      <img src="../images/prototype2_test2.PNG" alt="" width="500">
-      <figcaption>Figure 4: Second Test of Prototype 2</figcaption>
-    </figure>
+    <h3>Data Collection Sheets</h3>
 
-    <h3>User Questionnaire Answers</h3>
-    <p>Collected data from participants includes age, study field, tools used, and self-assessed focus ability.
-      Patterns
-      indicate diverse study habits and preferences.</p>
+    <h4>User Questionnaire Answers</h4>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Prototype</th>
+          <th>Participant</th>
+          <th>Age</th>
+          <th>Field of Study</th>
+          <th>Tabs Open</th>
+          <th>Tools Used</th>
+          <th>Avg. Study Duration</th>
+          <th>Focus Ability (1–5)</th>
+          <th>Focus Tools Used</th>
+          <th>Self-Classification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>22</td>
+          <td>Mechanical Engineering</td>
+          <td>20+</td>
+          <td>White Noise</td>
+          <td>2 hours</td>
+          <td>3</td>
+          <td>None</td>
+          <td>Overworker</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>19</td>
+          <td>Mechanical Engineering</td>
+          <td>15</td>
+          <td>Music</td>
+          <td>30 min</td>
+          <td>4</td>
+          <td>None</td>
+          <td>Easily Distracted Student</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>19</td>
+          <td>Electrical Engineering</td>
+          <td>10</td>
+          <td>Music</td>
+          <td>3 hours</td>
+          <td>4</td>
+          <td>None</td>
+          <td>Overworker</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>19</td>
+          <td>Electrical Engineering</td>
+          <td>8</td>
+          <td>None</td>
+          <td>2 hours</td>
+          <td>2</td>
+          <td>Timer</td>
+          <td>Balanced Planner</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Post-Testing Questionnaire</h4>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Prototype</th>
+          <th>Participant</th>
+          <th>Ease of Use (1–5)</th>
+          <th>Focus Support (1–5)</th>
+          <th>Feedback Helpfulness (1–5)</th>
+          <th>Break Reminder Usefulness (1–5)</th>
+          <th>Liked Most</th>
+          <th>Improvements</th>
+          <th>Daily Use?</th>
+          <th>Intrusiveness (1–5)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Glow Effect</td>
+          <td>Less obstructive UI</td>
+          <td>Maybe</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>2</td>
+          <td>Breathing Effect</td>
+          <td>Get more feedback</td>
+          <td>No</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>2</td>
+          <td>3</td>
+          <td>3</td>
+          <td>2</td>
+          <td>Coffee mug animation</td>
+          <td>Remove vibration cue</td>
+          <td>No</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>2</td>
+          <td>4</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Ambient Lighting</td>
+          <td>Different cues for break and distraction</td>
+          <td>Yes</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Time Taken for Each Task</h4>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Average Time Prototype 1</th>
+          <th>Average Time Prototype 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starting the Focus Session</td>
+          <td>1 min</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Reacting to a Distraction</td>
+          <td>3 min</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Interacting with the UI</td>
+          <td>1 min</td>
+          <td>1 min</td>
+        </tr>
+        <tr>
+          <td>Taking a Break</td>
+          <td>2 min</td>
+          <td>1 min</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Common Errors and Points of Confusion</h3>
+    <p>
+      Some common errors and points of confusion were discovered through the questionnaire data. Certain participants
+      rated themselves extremely low on sustaining attention even after using tools like music or white noise,
+      suggesting
+      that these tools may not work for everyone or were used inappropriately. There was also confusion around how to
+      categorize a focus tool. Participants sometimes mixed up break reminders with distraction cues, which may have
+      led to unstable feedback. The physical and visual cues of the system were occasionally perceived as intrusive
+      rather
+      than helpful, and the similarity between prototype features, such as glow effect versus breathing effect, may have
+      contributed to vague or generic responses.
+    </p>
+
+    <h3>User Feedback</h3>
+    <p>
+      User feedback was mixed. Subtle effects like the glow effect and breathing effect were generally well-received, as
+      were ambient lighting and the coffee mug animation. However, some participants requested a less obtrusive user
+      interface and more variety in feedback. The vibration cue was particularly highlighted as annoying or unnecessary.
+      One user suggested clearer differentiation between cues signaling breaks versus those signaling distractions.
+    </p>
+
+    <h3>Suggested Improvements</h3>
+    <p>
+      Several possible improvements can be derived from this feedback:
+    </p>
+    <ul>
+      <li>Explain what a focus tool is through onboarding instructions or examples.</li>
+      <li>Allow users to customize feedback cues to their preferences and sensitivities.</li>
+      <li>Differentiating break reminders from distraction notices using different visual styles, colors, animations, or
+        durations.</li>
+      <li>Reduce interface obtrusiveness to improve user experience.</li>
+      <li>Enable control over feedback intensity, vibration strength, or brightness to allow more flexibility.</li>
+      <li>Provide a brief tutorial or walkthrough explaining the system operation and how to interpret its signals.</li>
+    </ul>
+    <p>
+      These suggestions align with the research focus on improving learnability and user experience relative to the
+      usability goals of the system.
+    </p>
 
     <h3>Key Takeaways & Learning Outcome</h3>
-    <p>Most participants were engineering students who found the concept promising but noted unclear cues and limited
-      intuitiveness. The mug fill indicator lacked clarity without explicit instruction. Improvements include clearer
-      break alerts and refined feedback intensity.</p>
+    <p>
+      The participants' perspective of the system was critical. Most of them are from an Engineering background. Study
+      patterns and concentrations varied between participants, with a number relying on environmental aids like music or
+      white noise but nevertheless struggling to focus. This suggests that external aids are common but may not be
+      sufficient without structured support. The system prototypes featured many visual as well as physical feedback
+      cues, which met mixed reactions. The absence of differentiation between break reminders and distraction alerts
+      also emerged as a persistent source of confusion. The improvements needed are for customization, clearer
+      differentiation of cues, and a less cluttered interface.
+    </p>
 
-    <h3>Future Plans</h3>
-    <p>Future iterations will refine the LED and haptic feedback logic, redesign unclear UI indicators, and enhance
-      user
-      onboarding for better intuitiveness.</p>
   </section>
+
+  <h3>Photos of testing</h3>
+  <figure>
+    <img src="../images/prototype1_test1.png" alt="" width="500">
+    <figcaption>Figure 6: First Test of Prototype 1</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/prototype1_test2.png" alt="" width="500">
+    <figcaption>Figure 7: Second Test of Prototype 1</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/prototype2_test1.PNG" alt="" width="500">
+    <figcaption>Figure 8: First Test of Prototype 2</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/prototype2_test2.PNG" alt="" width="500">
+    <figcaption>Figure 9: Second Test of Prototype 2</figcaption>
+  </figure>
 </body>
 
 </html>
