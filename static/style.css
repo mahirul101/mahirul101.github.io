@@ -95,3 +95,11 @@ footer {
   font-size: 14px;
   text-align: center;
 }
+
+.task-block {
+  background-color: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
