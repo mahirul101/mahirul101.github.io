@@ -163,103 +163,130 @@
 
   <section>
     <h2>Usability Goals</h2>
-    <p>The success of the FocusBrowse system is evaluated against five key usability goals: Learnability, Efficiency,
-      Satisfaction, Error Recovery, and Engagement (Non-Intrusiveness). The following objectives and corresponding
-      metrics are designed to be directly measured using data collected from the benchmark tasks and post-testing
-      questionnaire.</p>
-
+    <p>The FocusBrowse system is evaluated against five key usability goals:</p>
     <table border="1" cellpadding="8" cellspacing="0">
       <thead>
         <tr>
           <th>Usability Goal</th>
-          <th>Objective</th>
-          <th>Measurement Method</th>
-          <th>Key Metric(s)</th>
-          <th>Success Criteria</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Learnability</td>
-          <td>Ensure new users can independently configure and navigate the system quickly.</td>
-          <td>Benchmark Task 1: Starting the Focus Session; Benchmark Task 2: Interacting with the Restrictive UI
-            (timed observation).</td>
-          <td>Time (seconds) from task start until session active; time taken to correctly navigate the interface
-            without assistance.</td>
-          <td>100% of participants complete setup within 2 minutes; minimal errors or confusion navigating the
-            interface.</td>
+          <td>New users can independently configure and navigate the system quickly.</td>
         </tr>
         <tr>
           <td>Efficiency</td>
-          <td>Minimize time lost to distractions during study sessions.</td>
-          <td>Benchmark Task 2: Interacting with the Restrictive UI; Benchmark Task 3: Reacting to a Distraction;
-            Post-test question: "Did the system help you stay focused?"</td>
-          <td>Duration (s) spent on non-focus tabs; Likert rating of focus support; time to return to focused tasks.
-          </td>
-          <td>Short average distraction recovery time; average Likert score ≥ 4/5.</td>
+          <td>Minimize time lost to distractions and optimize user focus during study sessions.</td>
         </tr>
         <tr>
           <td>Satisfaction</td>
-          <td>Ensure users feel supported, comfortable, and productive using the system.</td>
-          <td>Post-testing questionnaire (Likert & open-ended questions); observations across all tasks.</td>
-          <td>Average ratings on ease of use, helpfulness of feedback, usefulness of reminders, and "Would you use this
-            system daily?"; qualitative feedback.</td>
-          <td>Average scores ≥ 4/5; positive qualitative feedback; users report confidence and comfort using the system.
-          </td>
+          <td>Users feel supported, comfortable, and productive while using the system.</td>
         </tr>
         <tr>
           <td>Error Recovery</td>
-          <td>Help users quickly recover from distractions using the system’s cues.</td>
-          <td>Benchmark Task 2: Interacting with the Restrictive UI; Benchmark Task 3: Reacting to a Distraction
-            (timelapse video analysis).</td>
-          <td>Duration (s) from distraction feedback trigger to returning focus; number of errors before recovery.</td>
-          <td>Low average distraction duration; users respond effectively to feedback cues.</td>
+          <td>Users quickly recover from distractions using system cues.</td>
         </tr>
         <tr>
           <td>Engagement (Non-Intrusiveness)</td>
-          <td>Provide focus cues that are effective but not annoying or disruptive.</td>
-          <td>Post-test question: "How much did you find this system intrusive?"; Benchmark Tasks 2 & 3 observation;
-            qualitative feedback ("What would you improve?")</td>
-          <td>Average intrusiveness rating (Likert scale); observed hesitations, frustration, or ignoring cues;
-            qualitative comments.</td>
-          <td>Average intrusiveness score ≤ 2/5; minimal user complaints about feedback being too aggressive or
-            disruptive.</td>
+          <td>System provides effective focus cues that are not annoying or disruptive.</td>
         </tr>
       </tbody>
     </table>
-
   </section>
 
   <section>
     <h2>Benchmarking Tasks</h2>
-    <p>To assess whether the system's usability goals are met, participants will be asked to complete a series of
-      benchmark tasks. These tasks are designed to encompass the core functionality of the system, from initial setup to
-      managing distractions and breaks.</p>
+    <p>Each task evaluates core usability aspects and measures performance against usability goals.</p>
 
     <h4>Task 1: Starting the Focus Session</h4>
-    <p>The first benchmark task requires participants to configure and initiate
-      a focus session. They will be asked to set up the system for a 50-minute study period focused on specific academic
-      websites, followed by a 15-minute break. The goal is to observe the initial setup process, measuring the time
-      taken
-      and noting any points of confusion. Success is achieved when the session timer begins, the empty coffee mug icon
-      becomes visible in the browser interface, and the LED light is green, indicating the system is active.</p>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Measurement Method</th>
+          <th>Key Metric(s)</th>
+          <th>Success Criteria</th>
+          <th>Related Usability Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Participants configure and start a 50-minute focus session with a 15-minute break.</td>
+          <td>Timed observation from task start until session is active.</td>
+          <td>Time (seconds) to start session; number of errors or confusions during setup.</td>
+          <td>100% of participants complete setup within 2 minutes; minimal errors.</td>
+          <td>Learnability</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h4>Task 2: Interacting with the Restrictive UI</h4>
-    <p>The final task involves general navigation within the constrained environment. Participants will be asked to
-      perform typical study activities, such as navigating in their pre-approved tabs. The goal is to ensure that core
-      navigation remains fluid and unobstructed when staying within the defined parameters.</p>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Measurement Method</th>
+          <th>Key Metric(s)</th>
+          <th>Success Criteria</th>
+          <th>Related Usability Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Participants navigate within approved tabs while restricted elements are active.</td>
+          <td>Timed observation of interactions; notes of confusion or errors.</td>
+          <td>Time to complete tasks; number of mistakes or hesitations.</td>
+          <td>Users navigate smoothly; minimal errors or confusion.</td>
+          <td>Learnability, Efficiency, Error Recovery</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h4>Task 3: Reacting to a Distraction</h4>
-    <p>This task evaluates how users respond to the system's feedback when they become distracted. During their focus
-      session, participants will be instructed to intentionally open a non-focused website, such as a social media or
-      news platform. The key metric is the time elapsed between opening the distracting tab and returning to a focused
-      study tab.</p>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Measurement Method</th>
+          <th>Key Metric(s)</th>
+          <th>Success Criteria</th>
+          <th>Related Usability Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Participants intentionally open a distracting website; system cues aim to redirect attention.</td>
+          <td>Timed observation; post-test Likert questionnaire about focus support; timelapse video.</td>
+          <td>Time to return to focused tab; distraction recovery duration; user rating of focus support.</td>
+          <td>Short distraction duration; average Likert ≥ 4/5.</td>
+          <td>Efficiency, Error Recovery, Engagement</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h4>Task 4: Taking a Break</h4>
-    <p>The third task assesses the system's break reminder functionality. Participants will work until the system
-      automatically signals the end of the focus period. Success is measured by the user's adherence to the break prompt
-      and their seamless resumption of work when the next focus session begins.</p>
-
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Measurement Method</th>
+          <th>Key Metric(s)</th>
+          <th>Success Criteria</th>
+          <th>Related Usability Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Participants continue studying until the system signals a break, step away, then resume work.</td>
+          <td>Observation of response to break cues; notes on compliance.</td>
+          <td>Time to respond to break cue; adherence to break schedule.</td>
+          <td>User acknowledges break; resumes work seamlessly.</td>
+          <td>Satisfaction, Engagement</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section>
@@ -574,7 +601,7 @@
       </figure>
     </section>
 
-    <h3>Data Collection Sheets</h3>
+    <h3>Results</h3>
 
     <h4>User Questionnaire Answers</h4>
     <table border="1" cellpadding="5" cellspacing="0">
@@ -712,38 +739,191 @@
       </tbody>
     </table>
 
-    <h4>Time Taken for Each Task</h4>
-    <table border="1" cellpadding="5" cellspacing="0">
+    <h4>Observation Data Collection Sheet — All Prototypes & Participants</h4>
+
+    <table border="1" cellpadding="8" cellspacing="0">
       <thead>
         <tr>
-          <th>Task</th>
-          <th>Average Time Prototype 1</th>
-          <th>Average Time Prototype 2</th>
+          <th>Prototype</th>
+          <th>Participant</th>
+          <th>Task #</th>
+          <th>Task Description</th>
+          <th>Time Taken</th>
+          <th>Task Successful?</th>
+          <th>Notes / Observed Actions</th>
+          <th>Confusions / Errors</th>
         </tr>
       </thead>
       <tbody>
+        <!-- Prototype 1, Participant 1 -->
         <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
           <td>Starting the Focus Session</td>
           <td>1 min</td>
-          <td>3 min</td>
+          <td>Yes</td>
+          <td>User quickly configured session</td>
+          <td>None</td>
         </tr>
         <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>2</td>
+          <td>Interacting with the Restrictive UI</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Navigation smooth</td>
+          <td>Minor confusion about tab focus indicator</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>3</td>
           <td>Reacting to a Distraction</td>
           <td>3 min</td>
-          <td>2 min</td>
+          <td>Yes</td>
+          <td>Returned to focus tab after LED alert</td>
+          <td>Initially ignored distraction cue</td>
         </tr>
         <tr>
-          <td>Interacting with the UI</td>
-          <td>1 min</td>
-          <td>1 min</td>
-        </tr>
-        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>4</td>
           <td>Taking a Break</td>
           <td>2 min</td>
+          <td>Yes</td>
+          <td>Notified by LED, took break</td>
+          <td>None</td>
+
+          <!-- Prototype 1, Participant 2 -->
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td>Starting the Focus Session</td>
           <td>1 min</td>
+          <td>Yes</td>
+          <td>Completed setup quickly</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Interacting with the Restrictive UI</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Minor hesitation navigating tabs</td>
+          <td>Confused by interface icons</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Reacting to a Distraction</td>
+          <td>3 min</td>
+          <td>Yes</td>
+          <td>Responded to LED dimming</td>
+          <td>Delayed reaction to vibration cue</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>4</td>
+          <td>Taking a Break</td>
+          <td>2 min</td>
+          <td>Yes</td>
+          <td>Break notification acknowledged</td>
+          <td>Mixed up break vs distraction cue</td>
+        </tr>
+
+        <!-- Prototype 2, Participant 3 -->
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>1</td>
+          <td>Starting the Focus Session</td>
+          <td>3 min</td>
+          <td>Yes</td>
+          <td>Configured session successfully</td>
+          <td>Needed help reading instructions</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>2</td>
+          <td>Interacting with the Restrictive UI</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Navigation smooth</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>3</td>
+          <td>Reacting to a Distraction</td>
+          <td>2 min</td>
+          <td>Yes</td>
+          <td>Quickly returned after coffee mug animation</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>Taking a Break</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Break followed, resumed work</td>
+          <td>None</td>
+        </tr>
+
+        <!-- Prototype 2, Participant 4 -->
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>1</td>
+          <td>Starting the Focus Session</td>
+          <td>3 min</td>
+          <td>Yes</td>
+          <td>Completed setup; understood interface</td>
+          <td>Confused by tab restriction</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>2</td>
+          <td>Interacting with the Restrictive UI</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Navigation smooth</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>3</td>
+          <td>Reacting to a Distraction</td>
+          <td>2 min</td>
+          <td>Yes</td>
+          <td>Returned to focus tab after LED alert</td>
+          <td>Confused by overlapping cues</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>4</td>
+          <td>Taking a Break</td>
+          <td>1 min</td>
+          <td>Yes</td>
+          <td>Break notification acknowledged</td>
+          <td>None</td>
         </tr>
       </tbody>
     </table>
+
 
     <h3>Common Errors and Points of Confusion</h3>
     <p>
