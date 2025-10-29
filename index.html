@@ -63,26 +63,14 @@
 
 <body>
   <div class="container">
-    <h1>FocusBrowse</h1>
-    <p><strong>Team Members:</strong> Mahirul Islam &amp; William Gagnon-Desharnais</p>
-    <p>This web notebook contains all project deliverables for our HCI term project.</p>
-    <p style="margin-top:15px; text-align:center; max-width:600px; margin-left:auto; margin-right:auto; color:#333;">
-      FocusBrowse combines a browser-based focus mode with a smart table pad that uses light and vibration feedback to
-      help users maintain concentration and avoid distractions while studying or working online.</p>
-
-    <h2 style="text-align:center; margin-top:25px;">Deliverables</h2>
-    <ul>
-      <li><a href="project/observations.html">Observations &amp; Proposal</a></li>
-      <li><a href="project/prototype.html">Low-Fidelity Prototype</a></li>
-      <li><a href="#">Computer Prototype</a></li>
-      <li><a href="#">Formative Feedback</a></li>
-      <li><a href="#">Alpha System</a></li>
-      <li><a href="#">Beta System</a></li>
-    </ul>
-
-    <footer>
-      <p>Last updated: October 2025</p>
-    </footer>
+     <button id="connect">Connect to Serial</button>
+    <script>
+        document.getElementById("connect").addEventListener("click", async () => {
+            const port = await navigator.serial.requestPort();
+            await port.open({ baudRate: 9600 });
+            alert("Succefful Connection")
+        })
+    </script>
   </div>
 </body>
 
