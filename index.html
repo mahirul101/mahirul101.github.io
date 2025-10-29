@@ -65,11 +65,32 @@
   <div class="container">
      <button id="connect">Connect to Serial</button>
     <script>
+        let writer;
+
+        async function sendMode(mode) {
+            if (!writer) {
+                alert("Please connect to Arduino first.");
+                return;
+            }
+            const data = new TextEncoder().encode(mode.toString());
+            await writer.write(data);
+            console.log("Sent mode:", mode);
+        }
+
+        function getModeFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('mode') || '1'; // Default to mode 1 if not provided
+        }
+
         document.getElementById("connect").addEventListener("click", async () => {
             const port = await navigator.serial.requestPort();
             await port.open({ baudRate: 9600 });
-            alert("Succefful Connection")
-        })
+            writer = port.writable.getWriter();
+            alert("Successful Connection");
+
+            const mode = getModeFromURL();
+            await sendMode(mode);
+        });
     </script>
   </div>
 </body>
