@@ -7,9 +7,9 @@
   <title>FocusBrowse - HCI Term Project</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
-      color: #111;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      color: #333;
       margin: 0;
       padding: 0;
     }
@@ -17,44 +17,49 @@
     .container {
       max-width: 700px;
       margin: 60px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background: #ffffffcc;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      margin: 6px 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    a {
+      font-size: 2.2em;
+      margin-bottom: 20px;
       color: #0078ff;
-      text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    p.notice {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 30px;
+    }
+
+    button#connect {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 12px 24px;
+      font-size: 1em;
+      font-weight: bold;
+      color: white;
+      background-color: #0078ff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#connect:hover {
+      background-color: #005ecb;
     }
 
     footer {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
       color: #666;
       font-size: 14px;
     }
@@ -63,36 +68,35 @@
 
 <body>
   <div class="container">
-     <button id="connect">Connect to Serial</button>
+    <h1>FocusBrowse</h1>
+    <p class="notice">⚠️ Please keep this tab open for proper communication with your device.</p>
+    <button id="connect">Connect to Serial</button>
     <script>
-        let writer;
-        // Connect to serial port
-        document.getElementById("connect").addEventListener("click", async () => {
-            const port = await navigator.serial.requestPort();
-            await port.open({ baudRate: 9600 });
-            writer = port.writable.getWriter();
-            alert("Connected to Arduino");
-        });
+      let writer;
+      document.getElementById("connect").addEventListener("click", async () => {
+        const port = await navigator.serial.requestPort();
+        await port.open({ baudRate: 9600 });
+        writer = port.writable.getWriter();
+        alert("Connected to Arduino");
+      });
 
-        // Listen for messages from other tabs/extensions
-        window.addEventListener("message", async (event) => {
-            // Not validating origin validate origin
+      window.addEventListener("message", async (event) => {
+        const mode = event.data.mode;
+        if (!writer) {
+          console.warn("Serial port not connected yet.");
+          return;
+        }
+        if (typeof mode !== "string") {
+          console.warn("Invalid mode format.");
+          return;
+        }
 
-            const mode = event.data.mode;
-            if (!writer) {
-                console.warn("Serial port not connected yet.");
-                return;
-            }
-            if (typeof mode !== "string") {
-                console.warn("Invalid mode format.");
-                return;
-            }
-
-            const data = new TextEncoder().encode(mode);
-            await writer.write(data);
-            console.log("Sent mode via postMessage:", mode);
-        });
+        const data = new TextEncoder().encode(mode);
+        await writer.write(data);
+        console.log("Sent mode via postMessage:", mode);
+      });
     </script>
+    <footer>HCI Term Project &mdash; Fall 2025</footer>
   </div>
 </body>
 
