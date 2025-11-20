@@ -77,9 +77,10 @@
         const port = await navigator.serial.requestPort();
         await port.open({ baudRate: 9600 });
         writer = port.writable.getWriter();
+        alert("Connected to Arduino");
+        await new Promise(resolve => setTimeout(resolve, 500));
         const data = new TextEncoder().encode("3");
         await writer.write(data);
-        alert("Connected to Arduino");
       });
 
       window.addEventListener("message", async (event) => {
