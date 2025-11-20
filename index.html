@@ -77,6 +77,11 @@
         const port = await navigator.serial.requestPort();
         await port.open({ baudRate: 9600 });
         writer = port.writable.getWriter();
+        window.dispatchEvent(
+          new MessageEvent("message", {
+            data: { mode: "4" }
+          })
+        );
         alert("Connected to Arduino");
       });
 
