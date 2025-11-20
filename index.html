@@ -78,7 +78,7 @@
         await port.open({ baudRate: 9600 });
         writer = port.writable.getWriter();
         alert("Connected to Arduino");
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 1000)); //Boot up time for the arduino
         const data = new TextEncoder().encode("3");
         await writer.write(data);
       });
