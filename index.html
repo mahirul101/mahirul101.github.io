@@ -57,6 +57,14 @@
       background-color: #005ecb;
     }
 
+    select#modeSelect {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+    }
+
     footer {
       text-align: center;
       margin-top: 40px;
@@ -71,18 +79,50 @@
     <h1>FocusBrowse</h1>
     <p class="notice">⚠️ Please keep this tab open for proper communication with your device.</p>
     <button id="connect">Connect to Serial</button>
+
+    <!-- Dropdown menu for modes -->
+    <select id="modeSelect">
+      <option value="">-- Select Mode --</option>
+      <option value="0">0 - Off</option>
+      <option value="1">1 - Green</option>
+      <option value="2">2 - Yellow</option>
+      <option value="4">4 - Red</option>
+      <option value="3">3 - Breathe</option>
+      <option value="5">5 - Flash</option>
+      <option value="6">6 - Rainbow</option>
+      <option value="7">7 - White</option>
+    </select>
+
     <script>
       let writer;
+
       document.getElementById("connect").addEventListener("click", async () => {
         const port = await navigator.serial.requestPort();
         await port.open({ baudRate: 9600 });
         writer = port.writable.getWriter();
         alert("Connected to Arduino");
-        await new Promise(resolve => setTimeout(resolve, 1000)); //Boot up time for the arduino
-        const data = new TextEncoder().encode("3");
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Boot up time for Arduino
+        const data = new TextEncoder().encode("3"); // default mode
         await writer.write(data);
       });
 
+      // Handle dropdown selection
+      document.getElementById("modeSelect").addEventListener("change", async (event) => {
+        const mode = event.target.value;
+        if (!writer) {
+          console.warn("Serial port not connected yet.");
+          return;
+        }
+        if (!mode) {
+          console.warn("No mode selected.");
+          return;
+        }
+        const data = new TextEncoder().encode(mode);
+        await writer.write(data);
+        console.log("Sent mode via dropdown:", mode);
+      });
+
+      // Keep your postMessage listener if needed
       window.addEventListener("message", async (event) => {
         const mode = event.data.mode;
         if (!writer) {
@@ -93,12 +133,12 @@
           console.warn("Invalid mode format.");
           return;
         }
-
         const data = new TextEncoder().encode(mode);
         await writer.write(data);
         console.log("Sent mode via postMessage:", mode);
       });
     </script>
+
     <footer>HCI Term Project &mdash; Fall 2025</footer>
   </div>
 </body>
